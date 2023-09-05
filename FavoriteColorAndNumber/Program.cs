@@ -45,7 +45,7 @@ namespace FavoriteColorAndNumber
     static internal class Program
         //For the first unit make sure all classes and methods are static.
     {
-
+        // WriteMyVar writes out a given integer
         static void WriteMyVar(ref int nParameter)
         {
             Console.WriteLine(nParameter);
@@ -66,7 +66,7 @@ namespace FavoriteColorAndNumber
             int anotherInt = 2;
             string sFavoriteColor = null;
             string sFavoriteNumber = "";
-            int nFavoriteNumber = 0;
+            int? nFavoriteNumber = null;
             bool bValid = false;
 
             anotherInt = myInt;
@@ -91,27 +91,68 @@ namespace FavoriteColorAndNumber
 
             // Read the favorite number into a variable
             sFavoriteNumber = Console.ReadLine();
+
             //while(bValid == false)
-            //{
-            //}
-
-            //while(nFavoriteNumber == null)
-            //{
-            //}
-
-            try
+            // int nFavoriteNumberInt = 0;
+            while (nFavoriteNumber == null)
             {
-                nFavoriteNumber = Convert.ToInt32(sFavoriteNumber);
-            } 
-            catch
-            {
-                Console.WriteLine("Please enter an integer.");
+                try
+                {
+                    // nFavoriteNumber = Convert.ToInt32(sFavoriteNumber);
+                    // bValid = int.TryParse(sFavoriteNumber, out nFavoriteNumber);
+                    // Try parse won't work since nFavorite number is an "int?" data type
+                    // Try using a new int variable. bValid tells us whether our variable was changed or not.
+                    // bValid = int.TryParse(sFavoriteNumber, out nFavoriteNumberInt);
+
+                    nFavoriteNumber = int.Parse(sFavoriteNumber);
+                    // Parses sFavoriteNumber from a string into an int
+                }
+                catch
+                {
+                    Console.WriteLine("Please enter an integer.");
+                    sFavoriteNumber = Console.ReadLine();
+                }
             }
-         
+
+            // set favorite color to lower case
+            sFavoriteColor = sFavoriteColor.ToLower();   
+
+
+            // change the console output color to match their favorite color
+
+            // a switch statement is similar to an if statement, but it easier to use.
+            switch(sFavoriteColor)
+            {
+                case "red":
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    break;
+
+                case "blue":
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                    break;
+
+                case "magenta":
+                    Console.ForegroundColor = ConsoleColor.Magenta;
+                    break;
+
+                case "purple":
+                    Console.ForegroundColor = ConsoleColor.DarkMagenta;
+                    break;
+
+                default:
+                    Console.ForegroundColor = ConsoleColor.White;
+                    break;
+            }
+
+
             // A loop that outputs their favorite color, their favorite number of times
             for (int i = 0; i < nFavoriteNumber; i++)
             {
-                Console.WriteLine(sFavoriteColor);
+                Console.WriteLine("[" + (i + 1) + "/" + nFavoriteNumber + "] Your favorite color is " + sFavoriteColor + "!");
+
+                // two different ways to concatinate different data types
+                // Console.WriteLine($"Your favorite color is {sFavoriteColor + "!"}");
+                // Console.WriteLine("Your favorite color is {0}{1}", sFavoriteColor, "!");
             }
 
 
