@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34018.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "multidimensionalArrayTest1", "multidimensionalArrayTest1.csproj", "{167FC58A-AE3A-431D-9E97-B184CA8577FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{167FC58A-AE3A-431D-9E97-B184CA8577FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167FC58A-AE3A-431D-9E97-B184CA8577FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167FC58A-AE3A-431D-9E97-B184CA8577FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167FC58A-AE3A-431D-9E97-B184CA8577FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8380CF7D-297C-481C-B2EF-97EC43514095}
+	EndGlobalSection
+EndGlobal
