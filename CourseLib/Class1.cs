@@ -8,6 +8,7 @@ namespace CourseLib
 {
     public class Courses
     {
+        SortedList<string, Course> sortedList = new SortedList<string, Course>();
         public Courses()
         {
             Course thisCourse;
@@ -49,7 +50,7 @@ namespace CourseLib
             }
         }
 
-        SortedList<string, Course> sortedList = new SortedList<string, Course>();
+       
         
         public Course this[string courseCode]
         {

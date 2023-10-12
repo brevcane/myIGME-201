@@ -14,6 +14,7 @@ namespace PeopleApp
         static void Main(string[] args)
         {
             Courses courses = new Courses();
+
             // create our People SortedList!
             People people = new People();
 
@@ -122,6 +123,20 @@ namespace PeopleApp
                                 // gpa only belongs to Student, so we need a Student reference variable to output that
                                 Student student = (Student)thisPerson;
                                 Console.WriteLine($"{student.gpa}");
+                                List<string> courseList = student.courseCodes;
+                                foreach (string sCourse in courseList)
+                                {
+                                    Course course = courses[sCourse];
+                                    string s = sCourse + " - Description for " + sCourse + " ";
+                                    foreach(DayOfWeek day in course.schedule.daysOfWeek)
+                                    {
+                                        s += day.ToString() + " ";
+                                    }
+
+                                    s += $"{course.schedule.startTime:hh:mmtt}" + " - " + $"{course.schedule.endTime:hh:mmtt}";
+                                    Console.WriteLine(s);
+
+                                }
                             }
 
                             if (thisPerson.GetType() == typeof(Teacher))
@@ -222,6 +237,25 @@ namespace PeopleApp
                         {
                             break;
                         }
+                    }
+                    else
+                    {
+                        break;
+                    }
+                } while (true);
+            }
+
+            if (thisPerson.GetType() == typeof(Student))
+            {
+                Student thisStudent = (Student)thisPerson;
+
+                do
+                {
+                    Console.Write($"Course code=> ");
+                    string courseCode = Console.ReadLine();
+                    if (courseCode.Length > 0)
+                    {
+                        thisStudent.courseCodes.Add(courseCode);
                     }
                     else
                     {
