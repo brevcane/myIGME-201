@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("CourseLib")]
-[assembly: AssemblyCopyright("Copyright ©  2023")]
+[assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a23146d6-e733-4c60-bacb-5cb014dd0a19")]
+[assembly: Guid("4594d0d8-68aa-4df0-b68b-6f52cc0cff22")]
 
 // Version information for an assembly consists of the following four values:
 //

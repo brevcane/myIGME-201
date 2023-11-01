@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PeopleLib")]
+[assembly: AssemblyTitle("DynamicPeople")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PeopleLib")]
-[assembly: AssemblyCopyright("Copyright ©  2020")]
+[assembly: AssemblyProduct("DynamicPeople")]
+[assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("7eb35332-1975-4320-88f4-067cf6084b35")]
+[assembly: Guid("ffbaf7bf-3c43-4b84-955a-ef0f5e0be52a")]
 
 // Version information for an assembly consists of the following four values:
 //

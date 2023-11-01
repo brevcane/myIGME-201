@@ -6,40 +6,11 @@ using System.Threading.Tasks;
 
 namespace PeopleLib
 {
-    public enum genderPronoun
-    {
-        him,
-        her,
-        them
-    }
-    public enum collegeYear : byte
-    {
-        freshman = 23,
-        sophomore = 22,
-        junior = 21,
-        senior = 20
-    }
-
-    public interface ICourseList
-    {
-        List<string> CourseList
-        {
-            get;
-            set;
-        }
-    }
-
     public abstract class Person
     {
         public string name;
         public int age;
-        public genderPronoun eGender;
         public string email;
-
-        public string photoPath;
-        public string homePageURL;
-        public DateTime dateOfBirth;
-
         private int licenseId;
 
         public int LicenseId
@@ -106,24 +77,9 @@ namespace PeopleLib
         void Eat();
     }
 
-    public class Student : Person, IPerson, IStudent, ICourseList
+    public class Student : Person, IPerson, IStudent
     {
         public double gpa;
-        public collegeYear eCollegeYear;
-        public List<string> courseCodes = new List<string>();
-
-        public List<String> CourseList
-        {
-            get
-            {
-                return this.courseCodes;
-            }
-
-            set
-            {
-                this.courseCodes = value;
-            }
-        }
 
         public static bool operator <(Student s1, Student s2)
         {
@@ -167,23 +123,9 @@ namespace PeopleLib
 
     }
 
-    public class Teacher : Person, IPerson, ICourseList
+    public class Teacher : Person, IPerson
     {
         public string specialty;
-        public List<string> courseCodes = new List<string>();
-
-        public List<String> CourseList
-        {
-            get
-            {
-                return this.courseCodes;
-            }
-
-            set
-            {
-                this.courseCodes = value;
-            }
-        }
 
         public override void Work()
         {
